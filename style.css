@@ -1,13 +1,45 @@
 body {
-    background-color: LightPink;
-    height: 100vh;
-    text-align: center
+    text-align: center;
 }
 
 .card {
-    height: 100vh;
+    height: 550px;
+    margin: 50px;
+    text-align: center;
 }
 
-.buttons{
-    font-size: 60px; 
+.title {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    /* for styling*/
+    font-size: large;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #e7a18a;
+}
+
+.buttons {
+    z-index: 1;
+    display: inline-block;
+    margin-top: 400px;
+}
+
+.buttons button {
+    background-color: #ad1027;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: 15px 0;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.buttons button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ad1027;
 }

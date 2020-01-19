@@ -3,29 +3,48 @@
 
 <head>
     <meta name="Description" content="Adding a node">
-    <link rel="stylesheet" href="style.css" />    
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
-    <h1>Project Pink</h1>
-    <div class="card">
-        <h1>Add a node for:</h1>
-        <div class="buttons">
-            <button type="button" class="node-btn btn btn-outline-primary">Restroom</button>
-            <button type="button" class="node-btn btn btn-outline-primary">Menstrual products</button>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="card ">
+        <div class="title ">
+            <h2>Add a node for</h2>
+            <br>
+            <div class="options ">
+                <button type="button " class="node-btn btn btn-lg btn-outline-dark ">restrooms</button>
+                <button type="button " class="node-btn btn btn-lg btn-outline-dark ">menstrual products</button>
+            </div>
+            <br>
+            <h2>at this address:</h2>
+            <br>
+            <div class="dropdown-type">
+                <input id="address " type="text " placeholder="Type in address... " />
+                <button id="user-location ">Use my location</button>
+            </div>
+            <br>
+
+            <button id="submit " type="submit " class="btn btn-primary ">Submit</button>
         </div>
     </div>
-    <div>
-        <h1>Address:</h1>
-        <input id="address" type="text" placeholder="Type in address..."/>
-        <img class="sidebar-image" src="logo.png"/>
-    </div>
 
-    <button id="submit" type="submit" class="btn btn-primary">Submit</button>
-    
-    <script src="addscript.js"></script>
+    <script src="addscript.js "></script>
 
 </body>
 
