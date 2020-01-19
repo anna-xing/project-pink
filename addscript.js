@@ -1,6 +1,6 @@
 window.onload = function() {
 
-    // Recording restroom or FHP or both
+    // Recording restroom, menstrual products, or both
 
     let addRestroom = false;
     let addFHP = false;

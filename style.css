@@ -3,14 +3,13 @@ body {
 }
 
 .card {
-    height: 550px;
-    margin: 50px;
+    height: 500px;
+    margin: 30px 50px;
     text-align: center;
 }
 
 .title {
     position: absolute;
-    z-index: 1;
     height: 100%;
     width: 100%;
     /* for styling*/
@@ -21,18 +20,22 @@ body {
     background-color: #e7a18a;
 }
 
+main {
+    margin: 0 50px;
+}
+
 .buttons {
     z-index: 1;
     display: inline-block;
-    margin-top: 400px;
+    margin-top: 370px;
 }
 
 .buttons button {
     background-color: #ad1027;
     border: none;
     color: white;
-    padding: 15px 32px;
-    margin: 15px 0;
+    padding: 12px 16px;
+    margin: 15px 10px;
     border-radius: 4px;
     text-align: center;
     text-decoration: none;
@@ -42,4 +45,21 @@ body {
 .buttons button:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     background-color: #ad1027;
+}
+
+.options button {
+    margin: 0 10px;
+}
+
+nav {
+    margin: 0 20px;
+}
+
+nav a {
+    color: black;
+}
+
+nav a:hover {
+    color: #e7a18a;
+    text-decoration: none;
 }
