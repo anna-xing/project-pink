@@ -5,18 +5,10 @@
        /* Set the size of the div element that contains the map */
       #map {
         height: 500px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
+        width: 93%;  /* The width is the width of the web page */
+        margin: 0 50px;
        }
     </style>
-<<<<<<< HEAD
-    <script>
-    var x = window.localStorage;
-    var mLat = x.myLat;
-    var mLong = x.myLong;
-    console.log(mLat + " " + mLong);
-    window.clear
-    </script>
-=======
   
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -27,10 +19,9 @@
     
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet"/>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="style.css">
     
         <title>Project Pink</title>
->>>>>>> 9418704d9b4da736e4cd362a952ffc61bcb598a5
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -99,13 +90,6 @@
     
 
     <script>
-<<<<<<< HEAD
-    
-    var radius = "test";
-    document.getElementById("radius").value = radius;
-
-=======
->>>>>>> 9418704d9b4da736e4cd362a952ffc61bcb598a5
  var map, infoWindow;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -152,14 +136,6 @@
                 
 
               // The location of restroom2 - free feminine hygiene product
-<<<<<<< HEAD
-                var rest2 = {lat: 43.4727726, lng: -80.5400459};
-                var marker = new google.maps.Marker({position: rest2, map: map});
-                
-                // The location of restroom2 - free feminine hygiene product
-                var rest2 = {lat:mLat, lng: mLong};
-                var marker = new google.maps.Marker({position: rest2, map: map});
-=======
                 var rest2 = {lat: 43.472101, lng: -80.542937};
                 var marker2 = new google.maps.Marker({position: rest2, map: map, icon: "http://maps.google.com/mapfiles/ms/icons/pink-dot.png"});
                 var info2 = new google.maps.InfoWindow({content: 'Chemistry 2, 1st Floor'});
@@ -174,7 +150,6 @@
               marker3.addListener('click', function(){
                 info3.open(map, marker3);
               });
->>>>>>> 9418704d9b4da736e4cd362a952ffc61bcb598a5
 
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());

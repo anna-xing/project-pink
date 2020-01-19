@@ -20,6 +20,11 @@ body {
     background-color: #e7a18a;
 }
 
+.my-legend {
+    margin-left: 50px;
+    text-align: left;
+}
+
 main {
     margin: 0 50px;
 }
