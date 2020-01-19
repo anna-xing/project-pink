@@ -4,31 +4,92 @@
     <style>
        /* Set the size of the div element that contains the map */
       #map {
-        height: 400px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
+        height: 500px;  /* The height is 400 pixels */
+        width: 93%;  /* The width is the width of the web page */
+        margin: 0 50px;
        }
     </style>
-    <script>
-    var x = window.localStorage;
-    var mLat = x.myLat;
-    var mLong = x.myLong;
-    console.log(mLat + " " + mLong);
-    window.clear
-    </script>
+  
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"/>
+        <link rel="stylesheet" href="style.css">
+    
+        <title>Project Pink</title>
   </head>
   <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Project Pink</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="add.html">Add node</a></li>
+        </ul>
+      </div>
+    </nav>
     <h3>Nearby Restrooms</h3>
-    <input id="radius"type="text" placeholder="Enter Search Radius in meters" />
+
+    <div class='my-legend'>
+      <div class='legend-title'>Legend</div>
+      <div class='legend-scale'>
+        <ul class='legend-labels'>
+          <li><span style='background: #e761ad;'></span>Restrooms with free feminine hygiene products</li>
+          <li><span style='background: #6990fd;'></span>General Restrooms</li>
+        </ul>
+      </div> 
+    </div>
+
+    <style type='text/css'>
+      .my-legend .legend-title {
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 90%;
+        }
+      .my-legend .legend-scale ul {
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        float: left;
+        list-style: none;
+        }
+      .my-legend .legend-scale ul li {
+        font-size: 80%;
+        list-style: none;
+        margin-left: 0;
+        line-height: 18px;
+        margin-bottom: 2px;
+        }
+      .my-legend ul.legend-labels li span {
+        display: block;
+        float: left;
+        height: 16px;
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 0;
+        border: 1px solid #999;
+        }
+      .my-legend .legend-source {
+        font-size: 70%;
+        color: #999;
+        clear: both;
+        }
+      .my-legend a {
+        color: #777;
+        }
+    </style>
     <!--The div element for the map -->
     <div id="map"></div>
     
 
-
     <script>
-    
-    var radius = "test";
-    document.getElementById("radius").value = radius;
-
  var map, infoWindow;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -60,22 +121,43 @@
                 // Add circle overlay and bind to marker
                 var circle = new google.maps.Circle({
                 map: map,
-                radius: 200,    
+                radius: 500,    
                 fillColor: '#AA0000'
                 });
                 circle.bindTo('center', marker, 'position');
 
               // The location of restroom1 - no free feminine hygiene product
                 var rest1 = {lat: 43.472390, lng: -80.541957};
-                var marker = new google.maps.Marker({position: rest1, map: map, icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png" });
+                var marker1 = new google.maps.Marker({position: rest1, map: map, icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"});
+                var info1 = new google.maps.InfoWindow({content: 'DC Library, 1st, 2nd, 3rd Floor'});
+                marker1.addListener('click', function(){
+                  info1.open(map, marker1);
+                });
+                
 
               // The location of restroom2 - free feminine hygiene product
-                var rest2 = {lat: 43.4727726, lng: -80.5400459};
-                var marker = new google.maps.Marker({position: rest2, map: map});
-                
-                // The location of restroom3 - free feminine hygiene product
-                var rest2 = {lat: 43.470956 , lng: -80.539281};
-                var marker = new google.maps.Marker({position: rest2, map: map});
+                var rest2 = {lat: 43.472101, lng: -80.542937};
+                var marker2 = new google.maps.Marker({position: rest2, map: map, icon: "http://maps.google.com/mapfiles/ms/icons/pink-dot.png"});
+                var info2 = new google.maps.InfoWindow({content: 'Chemistry 2, 1st Floor'});
+                marker2.addListener('click', function(){
+                  info2.open(map, marker2);
+                });
+
+              // The location of restroom3 - free feminine hygiene product
+              var rest3 = {lat: 43.471597, lng: -80.540713};
+              var marker3 = new google.maps.Marker({position: rest3, map: map, icon: "http://maps.google.com/mapfiles/ms/icons/pink-dot.png"});
+              var info3 = new google.maps.InfoWindow({content: 'Engineering 3, 1st, 2nd Floor'});
+              marker3.addListener('click', function(){
+                info3.open(map, marker3);
+              });
+
+              // The location of added restroom4 - free feminine hygiene product
+              var rest4 = {lat: 43.470956, lng: -80.539281};
+              var marker4 = new google.maps.Marker({position: rest4, map: map, icon: "http://maps.google.com/mapfiles/ms/icons/pink-dot.png"});
+              var info4 = new google.maps.InfoWindow({content: 'CPH'});
+              marker4.addListener('click', function(){
+                info4.open(map, marker4);
+              });
 
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
