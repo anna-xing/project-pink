@@ -2,6 +2,49 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css" />    
+</head>
+
+<body>
+    <h1> Project Pink! </h1>
+    <div class="card">
+        <h1>Add a node for:</h1>
+        <div class ="buttons">
+            <button type="button1" class="btn btn-primary">Restroom</button>
+            <div class = "divider"/>
+            <button type="button2" class="btn btn-primary">Feminine Utilities</button>
+        </div>
+    </div>
+    <div class="address">
+        <h1>Address: </h1>
+        <input type="text" placeholder="Type in address..." onfocus="getLocation()"/>
+        
+        <p id="locationResult"></p>
+        <img class="sidebar-image" src="logo.png"/>
+    </div>
+    <script>var x = document.getElementById("locationResult");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+  window.localStorage.setItem("myLat", position.coords.latitude);
+  window.localStorage.setItem("myLong", position.coords.longitude);
+}
+    </script>
+    
+    <script src="script.js"></script>
+=======
     <meta name="Description" content="Adding a node">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -43,6 +86,7 @@
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByOmYglw6ytvF01wCkzM9VZ4KeYevDB6s"></script>
     <script src="addscript.js"></script>
+>>>>>>> 9418704d9b4da736e4cd362a952ffc61bcb598a5
 
 </body>
 
