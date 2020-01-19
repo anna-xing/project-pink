@@ -1,0 +1,13 @@
+body {
+    background-color: LightPink;
+    height: 100vh;
+    text-align: center
+}
+
+.card {
+    height: 100vh;
+}
+
+.buttons {
+    font-size: 60px; 
+}
